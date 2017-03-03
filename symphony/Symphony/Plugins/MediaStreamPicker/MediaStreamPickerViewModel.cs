@@ -52,13 +52,20 @@ namespace Symphony.Plugins.MediaStreamPicker
         System.Threading.Timer _timer;
         object _locker = new object(); // lock for thread getting updates
 
-        ObservableCollection<Img> streams = new ObservableCollection<Img>();
-        int selectedIndex = -1;
-        bool isShareEnabled = false;
+        ObservableCollection<Img> screenStreams = new ObservableCollection<Img>();
+        ObservableCollection<Img> windowStreams = new ObservableCollection<Img>();
 
-        public MediaStreamPickerViewModel(Window window)
+        int selectedIndex = -1;
+        int selectedTab = 0;
+
+        bool isShareEnabled = false;
+        List<string> sources;
+
+        public MediaStreamPickerViewModel(Window window, string[] sources)
         {
             _viewWindow = window;
+            Sources = new List<string>();
+            Sources.AddRange(sources);
 
             this.CancelCommand = new CommandHandler(this.OnCancel);
             this.ShareCommand = new CommandHandler(this.OnShare);
@@ -149,7 +156,8 @@ namespace Symphony.Plugins.MediaStreamPicker
 
         void rebuild()
         {
-            streams.Clear();
+            screenStreams.Clear();
+            windowStreams.Clear();
             mediaStreams.Clear();
 
             // Note:
@@ -157,40 +165,82 @@ namespace Symphony.Plugins.MediaStreamPicker
             // see discussion here: https://bitbucket.org/chromiumembedded/cef/issues/1065/add-support-for-webrtc-based-screen
             foreach (EnumScreenResult screen in screens)
             {
-                addToStreams(screen.title, screen.image, "fullscreen");
+                addToScreenStreams(screen.title, screen.image, "fullscreen");
                 mediaStreams.Add("screen:" + screen.id + ":0");
             }
             foreach (EnumWindowResult window in windows)
             {
-                addToStreams(window.title, window.image, window.filename.ToString());
+                addToWindowStreams(window.title, window.image, window.filename.ToString());
                 mediaStreams.Add("window:" + window.hWnd.ToString() + ":0");
             }
 
-            Streams = streams;
+            ScreenStreams = screenStreams;
+            WindowStreams = windowStreams;
+
             selectedIndex = -1;
         }
 
-        void addToStreams(string title, BitmapSource image, string fileName)
+        void addToScreenStreams(string title, BitmapSource image, string fileName)
         {
             Img item = new Img(title, image, fileName);
-            streams.Add(item);
+            screenStreams.Add(item);
+        }
+
+        void addToWindowStreams(string title, BitmapSource image, string fileName)
+        {
+            Img item = new Img(title, image, fileName);
+            windowStreams.Add(item);
         }
 
         RequestShareEventArgs getSelectedMediaStream()
         {
-            if (selectedIndex == -1 || selectedIndex < 0 || selectedIndex >= mediaStreams.Count)
+            if (selectedIndex == -1 || selectedIndex < 0 || (selectedIndex + screenStreams.Count >= mediaStreams.Count))
                 return null;
-            RequestShareEventArgs args = new RequestShareEventArgs(mediaStreams[selectedIndex], streams[selectedIndex].fileName, streams[selectedIndex].Str);
+            
+            RequestShareEventArgs args = null;
+
+            //If both Applications & Screens are enabled.
+            if (Sources.Contains("screen") && Sources.Contains("window")) {
+                if (selectedTab == 0) {
+                    args = new RequestShareEventArgs(mediaStreams[selectedIndex], screenStreams[selectedIndex].fileName, screenStreams[selectedIndex].Str);
+                }
+                else
+                {
+                    args = new RequestShareEventArgs(mediaStreams[selectedIndex + screenStreams.Count], windowStreams[selectedIndex].fileName, windowStreams[selectedIndex].Str);
+                }
+            }
+            else
+            {
+                //If only Applications or Screens is enabled.
+                if (Sources.Contains("screen")) {
+                    args = new RequestShareEventArgs(mediaStreams[selectedIndex], screenStreams[selectedIndex].fileName, screenStreams[selectedIndex].Str);
+                }
+                else
+                {
+                    args = new RequestShareEventArgs(mediaStreams[selectedIndex + screenStreams.Count], windowStreams[selectedIndex].fileName, windowStreams[selectedIndex].Str);
+                }
+            }
+
             return args;
         }
 
-        public ObservableCollection<Img> Streams
+        public ObservableCollection<Img> ScreenStreams
         {
-            get { return this.streams; }
+            get { return this.screenStreams; }
             set
             {
-                this.streams = value;
-                this.OnPropertyChanged("Streams");
+                this.screenStreams = value;
+                this.OnPropertyChanged("ScreenStreams");
+            }
+        }
+
+        public ObservableCollection<Img> WindowStreams
+        {
+            get { return this.windowStreams; }
+            set
+            {
+                this.windowStreams = value;
+                this.OnPropertyChanged("WindowStreams");
             }
         }
 
@@ -206,6 +256,20 @@ namespace Symphony.Plugins.MediaStreamPicker
             }
         }
 
+        public int SelectedTab
+        {
+            get { return this.selectedTab; }
+            set
+            {
+                if (value == this.selectedTab) return;
+                this.selectedTab = value;
+                this.OnPropertyChanged("SelectedTab");
+                IsShareEnabled = false;
+                this.selectedIndex = -1;
+                this.OnPropertyChanged("SelectedIndex");
+            }
+        }
+
         public bool IsShareEnabled
         {
             get { return this.isShareEnabled; }
@@ -217,6 +281,16 @@ namespace Symphony.Plugins.MediaStreamPicker
             }
         }
 
+
+        public List<string> Sources
+        {
+            get { return this.sources; }
+            set
+            {
+                if (value == this.sources) return;
+                this.sources = value;
+            }
+        }
         public event EventHandler<RequestShareEventArgs> RequestShare;
         public event EventHandler RequestCancel;
 
