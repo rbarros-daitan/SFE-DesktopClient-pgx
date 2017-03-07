@@ -32,10 +32,13 @@ namespace Symphony.Plugins
             var mainWindow = (Window)this.application.WindowManager.AllWindows[0];
             var showDialog = new Action(() =>
             {
-                var values = JsonConvert.DeserializeObject<System.Collections.Generic.Dictionary<string, string[]>>(arguments.ToString());
 
-                string[] sources;
-                values.TryGetValue("sources", out sources);
+                string[] sources = null;
+
+                if (arguments != null) {
+                    var values = JsonConvert.DeserializeObject<System.Collections.Generic.Dictionary<string, string[]>>(arguments.ToString());
+                    values.TryGetValue("sources", out sources);
+                }
 
                 var window = new MediaStreamPicker.MediaStreamPicker(sources);
 

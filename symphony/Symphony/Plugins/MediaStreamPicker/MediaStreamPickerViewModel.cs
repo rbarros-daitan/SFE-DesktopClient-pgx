@@ -65,7 +65,8 @@ namespace Symphony.Plugins.MediaStreamPicker
         {
             _viewWindow = window;
             Sources = new List<string>();
-            Sources.AddRange(sources);
+            if (sources != null)
+                Sources.AddRange(sources);
 
             this.CancelCommand = new CommandHandler(this.OnCancel);
             this.ShareCommand = new CommandHandler(this.OnShare);
@@ -197,31 +198,25 @@ namespace Symphony.Plugins.MediaStreamPicker
             if (selectedIndex == -1 || selectedIndex < 0 || (selectedIndex + screenStreams.Count >= mediaStreams.Count))
                 return null;
             
-            RequestShareEventArgs args = null;
+            int mediaStreamIndex = 0;
+            string filename, imgStr;
 
-            //If both Applications & Screens are enabled.
-            if (Sources.Contains("screen") && Sources.Contains("window")) {
-                if (selectedTab == 0) {
-                    args = new RequestShareEventArgs(mediaStreams[selectedIndex], screenStreams[selectedIndex].fileName, screenStreams[selectedIndex].Str);
-                }
-                else
-                {
-                    args = new RequestShareEventArgs(mediaStreams[selectedIndex + screenStreams.Count], windowStreams[selectedIndex].fileName, windowStreams[selectedIndex].Str);
-                }
+            //Modify mediaStreamIndex and select filename / imgStr arguments based on Sources list.
+            if (((Sources.Count == 0 || Sources.Contains("window")) && SelectedTab == 1) || (Sources.Count != 0 && !Sources.Contains("screen")))
+            {
+                mediaStreamIndex = selectedIndex + screenStreams.Count;
+                filename = windowStreams[selectedIndex].fileName;
+                imgStr = windowStreams[selectedIndex].Str;
             }
             else
             {
-                //If only Applications or Screens is enabled.
-                if (Sources.Contains("screen")) {
-                    args = new RequestShareEventArgs(mediaStreams[selectedIndex], screenStreams[selectedIndex].fileName, screenStreams[selectedIndex].Str);
-                }
-                else
-                {
-                    args = new RequestShareEventArgs(mediaStreams[selectedIndex + screenStreams.Count], windowStreams[selectedIndex].fileName, windowStreams[selectedIndex].Str);
-                }
+                mediaStreamIndex = selectedIndex;
+                filename = screenStreams[selectedIndex].fileName;
+                imgStr = screenStreams[selectedIndex].Str;
+
             }
 
-            return args;
+            return (new RequestShareEventArgs(mediaStreams[mediaStreamIndex], filename, imgStr));
         }
 
         public ObservableCollection<Img> ScreenStreams

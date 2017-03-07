@@ -25,15 +25,17 @@ namespace Symphony.Plugins.MediaStreamPicker
         public MediaStreamPicker(string[] sources)
         {
             InitializeComponent();
-            //Remove tab Screens if not enabled to share.
-            if (!sources.Contains("screen")) {
-                ContentSharePicker.Items.RemoveAt(0);
-            }
+            if (sources != null) {
+                //Remove tab Screens if not enabled to share.
+                if (!sources.Contains("screen")) {
+                    ContentSharePicker.Items.RemoveAt(0);
+                }
 
-            //Remove tab Applications if not enabled to share.
-            if (!sources.Contains("window"))
-            {
-                ContentSharePicker.Items.RemoveAt(1);
+                //Remove tab Applications if not enabled to share.
+                if (!sources.Contains("window"))
+                {
+                    ContentSharePicker.Items.RemoveAt(1);
+                }
             }
         }
     }
