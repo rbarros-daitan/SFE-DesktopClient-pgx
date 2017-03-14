@@ -21,6 +21,7 @@
     <ROW Property="CTRLS" Value="2"/>
     <ROW Property="DialogBitmap" Value="dialog" MultiBuildValue="DefaultBuild:Tabloid.jpg" Type="1" MsiKey="DialogBitmap"/>
     <ROW Property="Manufacturer" Value="Symphony"/>
+    <ROW Property="PODURL" Value="https://my.symphony.com" Type="4"/>
     <ROW Property="ProductCode" Value="1033:{CECA3220-932C-4FC3-876C-CA37D3548239} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="Symphony"/>
@@ -239,7 +240,7 @@
     <ROW Dialog_="FolderDlg" Control="Cancel" Type="PushButton" X="304" Y="243" Width="56" Height="17" Attributes="3" Text="[ButtonText_Cancel]" Order="600" TextLocId="-" MsiKey="FolderDlg#Cancel" Options="1"/>
     <ROW Dialog_="FolderDlg" Control="Back" Type="PushButton" X="180" Y="243" Width="56" Height="17" Attributes="3" Text="[ButtonText_Back]" Order="700" TextLocId="-" MsiKey="FolderDlg#Back" Options="1"/>
     <ROW Dialog_="FolderDlg" Control="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="370" Height="44" Attributes="1048577" Text="[BannerBitmap]" Help="|" Order="800" HelpLocId="Control.Help.FolderDlg#BannerBitmap" MsiKey="FolderDlg#BannerBitmap"/>
-    <ROW Dialog_="FolderDlg" Control="Title" Type="Text" X="15" Y="6" Width="200" Height="15" Attributes="196611" Text="Select Installation Folder" TextStyle="[DlgTitleFont]" Order="900" TextLocId="Control.Text.FolderDlg#Title" MsiKey="FolderDlg#Title"/>
+    <ROW Dialog_="FolderDlg" Control="Title" Type="Text" X="15" Y="6" Width="200" Height="15" Attributes="196611" Text="Select Installation Folder and POD URL" TextStyle="[DlgTitleFont]" Order="900" TextLocId="Control.Text.FolderDlg#Title" MsiKey="FolderDlg#Title"/>
     <ROW Dialog_="FolderDlg" Control="Text" Type="Text" X="25" Y="70" Width="320" Height="40" Attributes="3" Text="To install in this folder, click &quot;[Text_Next]&quot;. To install to a different folder, enter it below or click &quot;Browse&quot;." Order="1000" TextLocId="Control.Text.FolderDlg#Text" MsiKey="FolderDlg#Text"/>
     <ROW Dialog_="FolderDlg" Control="Description" Type="Text" X="25" Y="23" Width="280" Height="15" Attributes="196611" Text="This is the folder where [ProductName] will be installed." Order="1100" TextLocId="Control.Text.FolderDlg#Description" MsiKey="FolderDlg#Description"/>
     <ROW Dialog_="FolderDlg" Control="BannerLine" Type="Line" X="0" Y="44" Width="372" Height="0" Attributes="1" Order="1200" MsiKey="FolderDlg#BannerLine"/>
@@ -432,21 +433,21 @@
     <ROW Registry="HelpTelephone" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="HelpTelephone" Value="[ARPHELPTELEPHONE]" Component_="AI_CustomARPName"/>
     <ROW Registry="InstallLocation" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="InstallLocation" Value="[APPDIR]" Component_="AI_CustomARPName"/>
     <ROW Registry="ModifyPath" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="ModifyPath" Value="[AI_UNINSTALLER] /I [ProductCode]" Component_="AI_CustomARPName"/>
-    <ROW Registry="NewValue" Root="0" Key="symphony\DefaultIcon" Value="&quot;[paragon_Dir]paragon.exe&quot;,0" Component_="NewValue"/>
+    <ROW Registry="NewValue" Root="-1" Key="Software\[Manufacturer]\[ProductName]\DefaultIcon" Value="&quot;[paragon_Dir]paragon.exe&quot;,0" Component_="NewValue"/>
     <ROW Registry="NoRepair" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="NoRepair" Value="#1" Component_="AI_CustomARPName"/>
     <ROW Registry="Path" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Path" Value="[APPDIR]" Component_="ProductInformation"/>
-    <ROW Registry="PodUrl" Root="0" Key="symphony" Name="PodUrl" Component_="PodUrl"/>
+    <ROW Registry="PodUrl" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="PodUrl" Component_="PodUrl"/>
     <ROW Registry="Publisher" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="Publisher" Value="[Manufacturer]" Component_="AI_CustomARPName"/>
     <ROW Registry="URLInfoAbout" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="URLInfoAbout" Value="[ARPURLINFOABOUT]" Component_="AI_CustomARPName"/>
-    <ROW Registry="URLProtocol" Root="0" Key="symphony" Name="URL Protocol" Component_="URLProtocol"/>
+    <ROW Registry="URLProtocol" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="URL Protocol" Component_="URLProtocol"/>
     <ROW Registry="URLUpdateInfo" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="URLUpdateInfo" Value="[ARPURLUPDATEINFO]" Component_="AI_CustomARPName"/>
     <ROW Registry="UninstallPath" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="UninstallPath" Value="[AI_UNINSTALLER] /x [ProductCode]" Component_="AI_CustomARPName"/>
     <ROW Registry="UninstallString" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="UninstallString" Value="[AI_UNINSTALLER] /x [ProductCode]" Component_="AI_CustomARPName"/>
     <ROW Registry="Version" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Version" Value="[ProductVersion]" Component_="ProductInformation"/>
     <ROW Registry="VersionMajor" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="VersionMajor" Value="#1" Component_="AI_CustomARPName"/>
     <ROW Registry="VersionMinor" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="VersionMinor" Value="#0" Component_="AI_CustomARPName"/>
-    <ROW Registry="_" Root="0" Key="symphony\shell\open\command" Value="&quot;[paragon_Dir]paragon.exe&quot; /start-app=&quot;[#Symphony.pgx]&quot; /url=&quot;%1&quot;" Component_="_"/>
-    <ROW Registry="__1" Root="0" Key="symphony" Value="URL:Symphony Protocol" Component_="__1"/>
+    <ROW Registry="_" Root="-1" Key="Software\[Manufacturer]\[ProductName]\shell\open\command" Value="&quot;[paragon_Dir]paragon.exe&quot; /start-app=&quot;[#Symphony.pgx]&quot; /url=&quot;%1&quot;" Component_="_"/>
+    <ROW Registry="__1" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Value="URL:Symphony Protocol" Component_="__1"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
     <ROW Shortcut="MinuetShortcut" Directory_="DesktopFolder" Name="SYMPHO~1|Symphony Shortcut" Component_="paragon.exe" Target="[#paragon.exe]" Arguments="/start-app=&quot;[#Symphony.pgx]&quot;" Description="Shortcut to Symphony Application" Hotkey="0" Icon_="symphonylogo.exe" IconIndex="0" ShowCmd="1" WkDir="paragon_Dir"/>
