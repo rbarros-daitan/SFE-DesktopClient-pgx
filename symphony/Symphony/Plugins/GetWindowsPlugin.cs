@@ -1,6 +1,7 @@
 ﻿using Paragon.Plugins;
 using System.Windows;
 using System;
+using Newtonsoft.Json.Linq;
 
 namespace Symphony.Plugins
 {
@@ -61,5 +62,13 @@ namespace Symphony.Plugins
                 showDialog.Invoke();
         }
 
+        //RTC-968 - GetRTCCapabilities 
+        [JavaScriptPluginMember(Name = "getRtcCapabilities")]
+        public JObject GetRtcCapabilities()
+        {
+            var json = new JObject();
+            json["allowSources"] = true;
+            return json;
+        }
     }
 }
