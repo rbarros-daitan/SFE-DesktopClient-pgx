@@ -41,7 +41,7 @@ namespace Symphony.Plugins
                     values.TryGetValue("sources", out sources);
                 }
 
-                //RTC-1403 - do not show app picker if OS is Windows 7.
+                //RTC-1403 - do not show app picker if OS is Windows 7 & AERO Theme is off.
                 bool aeroEnabled;
                 NativeMethods.DwmIsCompositionEnabled(out aeroEnabled);
 
