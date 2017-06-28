@@ -16,14 +16,14 @@
     <ROW Property="ARPPRODUCTICON" Value="symphony_logo.exe" Type="8"/>
     <ROW Property="ARPSYSTEMCOMPONENT" Value="1"/>
     <ROW Property="ARPURLINFOABOUT" Value="http://www.symphony.com"/>
-    <ROW Property="BannerBitmap" Value="banner" MultiBuildValue="DefaultBuild:Banner.jpg" Type="1" MsiKey="BannerBitmap"/>
-    <ROW Property="DialogBitmap" Value="dialog" MultiBuildValue="DefaultBuild:Tabloid.jpg" Type="1" MsiKey="DialogBitmap"/>
+    <ROW Property="BannerBitmap" Value="banner" MultiBuildValue="DefaultBuild:Banner.jpg_1" Type="1" MsiKey="BannerBitmap"/>
+    <ROW Property="DialogBitmap" Value="dialog" MultiBuildValue="DefaultBuild:Tabloid.jpg_1" Type="1" MsiKey="DialogBitmap"/>
     <ROW Property="Manufacturer" Value="Symphony"/>
     <ROW Property="POD_URL" Value="https://my.symphony.com"/>
-    <ROW Property="ProductCode" Value="1033:{8FFDCC3B-E2B9-47D5-B72E-88E3AB7C440A} " Type="16"/>
+    <ROW Property="ProductCode" Value="1033:{1070B8A2-008D-42C6-9024-4F824FB105E9} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="Symphony"/>
-    <ROW Property="ProductVersion" Value="1.0.0" Type="32"/>
+    <ROW Property="ProductVersion" Value="1.46.2" Type="32"/>
     <ROW Property="REBOOT" MultiBuildValue="DefaultBuild:ReallySuppress"/>
     <ROW Property="RUNAPPLICATION" Value="1" Type="4"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
@@ -224,9 +224,9 @@
     <ROW Property="AI_DOTNET45_SEARCH" Signature_="AI_DotNet45SearchSgn" Builds="DefaultBuild"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
-    <ROW Name="Banner.jpg" SourcePath="..\..\..\Wrapper_HEAD\SFE-DesktopClient-pgx_base\installer\Assets\Banner.jpg"/>
+    <ROW Name="Banner.jpg_1" SourcePath="Assets\Banner.jpg"/>
     <ROW Name="CustomAction.CA.dll_1" SourcePath="..\bin\out\CustomAction.CA.dll"/>
-    <ROW Name="Tabloid.jpg" SourcePath="..\..\..\Wrapper_HEAD\SFE-DesktopClient-pgx_base\installer\Assets\Tabloid.jpg"/>
+    <ROW Name="Tabloid.jpg_1" SourcePath="Assets\Tabloid.jpg"/>
     <ROW Name="aicustact.dll" SourcePath="&lt;AI_CUSTACTS&gt;aicustact.dll"/>
     <ROW Name="viewer.exe" SourcePath="&lt;AI_CUSTACTS&gt;viewer.exe"/>
     <ROW Name="xmlCfg.dll" SourcePath="&lt;AI_CUSTACTS&gt;xmlCfg.dll"/>
