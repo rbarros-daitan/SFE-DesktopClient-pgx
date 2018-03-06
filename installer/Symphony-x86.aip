@@ -48,6 +48,7 @@
     <ROW Directory="apps_Dir" Directory_Parent="APPDIR" DefaultDir="apps"/>
     <ROW Directory="locales_Dir" Directory_Parent="paragon_Dir" DefaultDir="locales"/>
     <ROW Directory="paragon_Dir" Directory_Parent="APPDIR" DefaultDir="paragon"/>
+    <ROW Directory="swiftshader_Dir" Directory_Parent="paragon_Dir" DefaultDir="SWIFTS~1|swiftshader"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
     <ROW Component="AI_CustomARPName" ComponentId="{2817ACD9-F494-4729-9830-111EF3311CFA}" Directory_="APPDIR" Attributes="4" KeyPath="DisplayName" Options="1"/>
@@ -78,8 +79,8 @@
     <ROW Component="chrome_elf.dll" ComponentId="{9AA750A4-3489-47A6-A559-D9B324FBA737}" Directory_="paragon_Dir" Attributes="0" KeyPath="chrome_elf.dll"/>
     <ROW Component="d3dcompiler_43.dll" ComponentId="{B64ED7A6-244E-4A1E-A9A4-80CC414DBAD7}" Directory_="paragon_Dir" Attributes="0" KeyPath="d3dcompiler_43.dll"/>
     <ROW Component="d3dcompiler_47.dll" ComponentId="{47830E64-661E-4382-BC25-DB11C45EBE02}" Directory_="paragon_Dir" Attributes="0" KeyPath="d3dcompiler_47.dll"/>
-    <ROW Component="libEGL.dll" ComponentId="{C9AC1B8B-356A-430B-8D22-091BAEE5A5D2}" Directory_="paragon_Dir" Attributes="0" KeyPath="libEGL.dll"/>
-    <ROW Component="libGLESv2.dll" ComponentId="{8DF98B94-90B3-4265-A65E-E57018B0EF51}" Directory_="paragon_Dir" Attributes="0" KeyPath="libGLESv2.dll"/>
+    <ROW Component="libEGL.dll" ComponentId="{CDC56DD8-8EB7-4FE5-8DBC-CAD795C5FF13}" Directory_="swiftshader_Dir" Attributes="0" KeyPath="libEGL.dll"/>
+    <ROW Component="libGLESv2.dll" ComponentId="{40D9146C-5808-4E1A-BAEB-D029822D57DE}" Directory_="swiftshader_Dir" Attributes="0" KeyPath="libGLESv2.dll"/>
     <ROW Component="libcef.dll" ComponentId="{32C206ED-45E2-498E-9F03-F9ADD16A2D4A}" Directory_="paragon_Dir" Attributes="0" KeyPath="libcef.dll"/>
     <ROW Component="paragon.exe" ComponentId="{A1F22E74-4393-46BC-BE6D-D342EC1651FF}" Directory_="paragon_Dir" Attributes="0" KeyPath="paragon.exe"/>
   </COMPONENT>
@@ -116,7 +117,7 @@
     <ROW File="cef_100_percent.pak" Component_="cef.pak" FileName="CEF_10~1.PAK|cef_100_percent.pak" Attributes="0" SourcePath="..\vendor\SFE-Minuet-DesktopClient\bin\paragon\cef_100_percent.pak" SelfReg="false" NextFile="cef_200_percent.pak"/>
     <ROW File="cef_200_percent.pak" Component_="cef.pak" FileName="CEF_20~1.PAK|cef_200_percent.pak" Attributes="0" SourcePath="..\vendor\SFE-Minuet-DesktopClient\bin\paragon\cef_200_percent.pak" SelfReg="false" NextFile="d3dcompiler_43.dll"/>
     <ROW File="cef_extensions.pak" Component_="cef.pak" FileName="CEF_EX~1.PAK|cef_extensions.pak" Attributes="0" SourcePath="..\vendor\SFE-Minuet-DesktopClient\bin\paragon\cef_extensions.pak" SelfReg="false" NextFile="messagebus.jar"/>
-    <ROW File="chrome_elf.dll" Component_="chrome_elf.dll" FileName="CHROME~1.DLL|chrome_elf.dll" Attributes="0" SourcePath="..\vendor\SFE-Minuet-DesktopClient\bin\paragon\chrome_elf.dll" SelfReg="false"/>
+    <ROW File="chrome_elf.dll" Component_="chrome_elf.dll" FileName="CHROME~1.DLL|chrome_elf.dll" Attributes="0" SourcePath="..\vendor\SFE-Minuet-DesktopClient\bin\paragon\chrome_elf.dll" SelfReg="false" NextFile="libEGL.dll"/>
     <ROW File="cs.pak" Component_="am.pak" FileName="cs.pak" Attributes="0" SourcePath="..\vendor\SFE-Minuet-DesktopClient\bin\paragon\locales\cs.pak" SelfReg="false" NextFile="da.pak"/>
     <ROW File="d3dcompiler_43.dll" Component_="d3dcompiler_43.dll" FileName="D3DCOM~1.DLL|d3dcompiler_43.dll" Attributes="0" SourcePath="..\vendor\SFE-Minuet-DesktopClient\bin\paragon\d3dcompiler_43.dll" SelfReg="false" NextFile="devtools_resources.pak"/>
     <ROW File="d3dcompiler_47.dll" Component_="d3dcompiler_47.dll" FileName="D3DCOM~2.DLL|d3dcompiler_47.dll" Attributes="0" SourcePath="..\vendor\SFE-Minuet-DesktopClient\bin\paragon\d3dcompiler_47.dll" SelfReg="false" NextFile="cef_extensions.pak"/>
@@ -144,9 +145,9 @@
     <ROW File="ja.pak" Component_="am.pak" FileName="ja.pak" Attributes="0" SourcePath="..\vendor\SFE-Minuet-DesktopClient\bin\paragon\locales\ja.pak" SelfReg="false" NextFile="kn.pak"/>
     <ROW File="kn.pak" Component_="am.pak" FileName="kn.pak" Attributes="0" SourcePath="..\vendor\SFE-Minuet-DesktopClient\bin\paragon\locales\kn.pak" SelfReg="false" NextFile="ko.pak"/>
     <ROW File="ko.pak" Component_="am.pak" FileName="ko.pak" Attributes="0" SourcePath="..\vendor\SFE-Minuet-DesktopClient\bin\paragon\locales\ko.pak" SelfReg="false" NextFile="lt.pak"/>
-    <ROW File="libEGL.dll" Component_="libEGL.dll" FileName="libEGL.dll" Attributes="0" SourcePath="..\vendor\SFE-Minuet-DesktopClient\bin\paragon\libEGL.dll" SelfReg="false" NextFile="libGLESv2.dll"/>
-    <ROW File="libGLESv2.dll" Component_="libGLESv2.dll" FileName="LIBGLE~1.DLL|libGLESv2.dll" Attributes="0" SourcePath="..\vendor\SFE-Minuet-DesktopClient\bin\paragon\libGLESv2.dll" SelfReg="false" NextFile="Microsoft.Windows.Shell.dll"/>
-    <ROW File="libcef.dll" Component_="libcef.dll" FileName="libcef.dll" Attributes="0" SourcePath="..\vendor\SFE-Minuet-DesktopClient\bin\paragon\libcef.dll" SelfReg="false" NextFile="libEGL.dll"/>
+    <ROW File="libEGL.dll" Component_="libEGL.dll" FileName="libEGL.dll" Attributes="0" SourcePath="..\vendor\SFE-Minuet-DesktopClient\bin\paragon\swiftshader\libEGL.dll" SelfReg="false" NextFile="libGLESv2.dll"/>
+    <ROW File="libGLESv2.dll" Component_="libGLESv2.dll" FileName="LIBGLE~1.DLL|libGLESv2.dll" Attributes="0" SourcePath="..\vendor\SFE-Minuet-DesktopClient\bin\paragon\swiftshader\libGLESv2.dll" SelfReg="false"/>
+    <ROW File="libcef.dll" Component_="libcef.dll" FileName="libcef.dll" Attributes="0" SourcePath="..\vendor\SFE-Minuet-DesktopClient\bin\paragon\libcef.dll" SelfReg="false" NextFile="Microsoft.Windows.Shell.dll"/>
     <ROW File="lt.pak" Component_="am.pak" FileName="lt.pak" Attributes="0" SourcePath="..\vendor\SFE-Minuet-DesktopClient\bin\paragon\locales\lt.pak" SelfReg="false" NextFile="lv.pak"/>
     <ROW File="lv.pak" Component_="am.pak" FileName="lv.pak" Attributes="0" SourcePath="..\vendor\SFE-Minuet-DesktopClient\bin\paragon\locales\lv.pak" SelfReg="false" NextFile="ml.pak"/>
     <ROW File="messagebus.jar" Component_="cef.pak" FileName="MESSAG~1.JAR|messagebus.jar" Attributes="0" SourcePath="..\vendor\SFE-Minuet-DesktopClient\messagebus\messagebus.jar" SelfReg="false" NextFile="am.pak"/>
