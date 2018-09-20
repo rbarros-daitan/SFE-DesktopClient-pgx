@@ -70,7 +70,7 @@ paragon.app.runtime.onLaunched.addListener(function() {
                                     id: systemMenu.refresh,
                                     enabled: true
                                 }, {
-                                    header: 'Clear Cache and Refresh',
+                                    header: 'Refresh and Clear Cache',
                                     id: systemMenu.clearCacheAndRefresh,
                                     enabled: true
                                 }, {
