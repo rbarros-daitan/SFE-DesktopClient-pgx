@@ -110,7 +110,7 @@ paragon.app.runtime.onLaunched.addListener(function() {
                                         createdWindow.refresh();
                                         break;
                                     case systemMenu.clearCacheAndRefresh:
-                                        createdWindow.refresh(true);
+                                        createdWindow.refreshClearCache();
                                         break;
                                     case systemMenu.minimizeOnClose:
                                         createdWindow.setMinimizeOnClose(checked);
