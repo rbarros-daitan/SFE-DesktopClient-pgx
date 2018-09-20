@@ -50,10 +50,11 @@ paragon.app.runtime.onLaunched.addListener(function() {
 
                     var systemMenu = {
                         refresh: 1011,
-                        minimizeOnClose: 1021,
-                        editShortcuts: 1031,
-                        exit: 1041,
-                        about: 1051
+                        clearCacheAndRefresh: 1021,
+                        minimizeOnClose: 1031,
+                        editShortcuts: 1041,
+                        exit: 1051,
+                        about: 1061
                     };
 
                     var createParams = {
@@ -67,6 +68,10 @@ paragon.app.runtime.onLaunched.addListener(function() {
                                 items: [{
                                     header: 'Refresh',
                                     id: systemMenu.refresh,
+                                    enabled: true
+                                }, {
+                                    header: 'Refresh and Clear Cache',
+                                    id: systemMenu.clearCacheAndRefresh,
                                     enabled: true
                                 }, {
                                     header: 'Minimize on Close',
@@ -103,6 +108,9 @@ paragon.app.runtime.onLaunched.addListener(function() {
                                 switch (id) {
                                     case systemMenu.refresh:
                                         createdWindow.refresh();
+                                        break;
+                                    case systemMenu.clearCacheAndRefresh:
+                                        createdWindow.refreshClearCache();
                                         break;
                                     case systemMenu.minimizeOnClose:
                                         createdWindow.setMinimizeOnClose(checked);
