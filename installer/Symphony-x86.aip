@@ -93,6 +93,7 @@
     <ROW File="Microsoft.Windows.Shell.dll" Component_="Microsoft.Windows.Shell.dll" FileName="MICROS~1.DLL|Microsoft.Windows.Shell.dll" Attributes="0" SourcePath="..\vendor\SFE-Minuet-DesktopClient\bin\paragon\Microsoft.Windows.Shell.dll" SelfReg="false" NextFile="Newtonsoft.Json.dll"/>
     <ROW File="Newtonsoft.Json.dll" Component_="Newtonsoft.Json.dll" FileName="NEWTON~1.DLL|Newtonsoft.Json.dll" Attributes="0" SourcePath="..\vendor\SFE-Minuet-DesktopClient\bin\paragon\Newtonsoft.Json.dll" SelfReg="false" NextFile="Paragon.AppPackager.exe"/>
     <ROW File="Paragon.AppPackager.exe" Component_="Paragon.AppPackager.exe" FileName="PARAGO~1.EXE|Paragon.AppPackager.exe" Attributes="0" SourcePath="..\vendor\SFE-Minuet-DesktopClient\bin\paragon\Paragon.AppPackager.exe" SelfReg="false" NextFile="paragon.exe" DigSign="true"/>
+    <ROW File="Paragon.AppPackager.exe.config" Component_="cef.pak" FileName="PARAGO~5.CON|Paragon.AppPackager.exe.config" Attributes="0" SourcePath="..\vendor\SFE-Minuet-DesktopClient\bin\paragon\Paragon.AppPackager.exe.config" SelfReg="false" NextFile="v8_context_snapshot.bin"/>
     <ROW File="Paragon.Plugins.LocalStorage.dll" Component_="Paragon.Plugins.LocalStorage.dll" FileName="PARAGO~2.DLL|Paragon.Plugins.LocalStorage.dll" Attributes="0" SourcePath="..\vendor\SFE-Minuet-DesktopClient\bin\paragon\Paragon.Plugins.LocalStorage.dll" SelfReg="false" NextFile="Paragon.Plugins.MessageBus.dll"/>
     <ROW File="Paragon.Plugins.MessageBus.dll" Component_="Paragon.Plugins.MessageBus.dll" FileName="PARAGO~3.DLL|Paragon.Plugins.MessageBus.dll" Attributes="0" SourcePath="..\vendor\SFE-Minuet-DesktopClient\bin\paragon\Paragon.Plugins.MessageBus.dll" SelfReg="false" NextFile="Paragon.Plugins.Notifications.dll"/>
     <ROW File="Paragon.Plugins.MessageBus.dll.config" Component_="cef.pak" FileName="PARAGO~2.CON|Paragon.Plugins.MessageBus.dll.config" Attributes="0" SourcePath="..\vendor\SFE-Minuet-DesktopClient\bin\paragon\Paragon.Plugins.MessageBus.dll.config" SelfReg="false" NextFile="Paragon.Renderer.exe.config"/>
@@ -146,7 +147,7 @@
     <ROW File="kn.pak" Component_="am.pak" FileName="kn.pak" Attributes="0" SourcePath="..\vendor\SFE-Minuet-DesktopClient\bin\paragon\locales\kn.pak" SelfReg="false" NextFile="ko.pak"/>
     <ROW File="ko.pak" Component_="am.pak" FileName="ko.pak" Attributes="0" SourcePath="..\vendor\SFE-Minuet-DesktopClient\bin\paragon\locales\ko.pak" SelfReg="false" NextFile="lt.pak"/>
     <ROW File="libEGL.dll" Component_="libEGL.dll" FileName="libEGL.dll" Attributes="0" SourcePath="..\vendor\SFE-Minuet-DesktopClient\bin\paragon\swiftshader\libEGL.dll" SelfReg="false" NextFile="libGLESv2.dll"/>
-    <ROW File="libGLESv2.dll" Component_="libGLESv2.dll" FileName="LIBGLE~1.DLL|libGLESv2.dll" Attributes="0" SourcePath="..\vendor\SFE-Minuet-DesktopClient\bin\paragon\swiftshader\libGLESv2.dll" SelfReg="false"/>
+    <ROW File="libGLESv2.dll" Component_="libGLESv2.dll" FileName="LIBGLE~1.DLL|libGLESv2.dll" Attributes="0" SourcePath="..\vendor\SFE-Minuet-DesktopClient\bin\paragon\swiftshader\libGLESv2.dll" SelfReg="false" NextFile="Paragon.AppPackager.exe.config"/>
     <ROW File="libcef.dll" Component_="libcef.dll" FileName="libcef.dll" Attributes="0" SourcePath="..\vendor\SFE-Minuet-DesktopClient\bin\paragon\libcef.dll" SelfReg="false" NextFile="Microsoft.Windows.Shell.dll"/>
     <ROW File="lt.pak" Component_="am.pak" FileName="lt.pak" Attributes="0" SourcePath="..\vendor\SFE-Minuet-DesktopClient\bin\paragon\locales\lt.pak" SelfReg="false" NextFile="lv.pak"/>
     <ROW File="lv.pak" Component_="am.pak" FileName="lv.pak" Attributes="0" SourcePath="..\vendor\SFE-Minuet-DesktopClient\bin\paragon\locales\lv.pak" SelfReg="false" NextFile="ml.pak"/>
@@ -176,6 +177,7 @@
     <ROW File="th.pak" Component_="am.pak" FileName="th.pak" Attributes="0" SourcePath="..\vendor\SFE-Minuet-DesktopClient\bin\paragon\locales\th.pak" SelfReg="false" NextFile="tr.pak"/>
     <ROW File="tr.pak" Component_="am.pak" FileName="tr.pak" Attributes="0" SourcePath="..\vendor\SFE-Minuet-DesktopClient\bin\paragon\locales\tr.pak" SelfReg="false" NextFile="uk.pak"/>
     <ROW File="uk.pak" Component_="am.pak" FileName="uk.pak" Attributes="0" SourcePath="..\vendor\SFE-Minuet-DesktopClient\bin\paragon\locales\uk.pak" SelfReg="false" NextFile="vi.pak"/>
+    <ROW File="v8_context_snapshot.bin" Component_="cef.pak" FileName="V8_CON~1.BIN|v8_context_snapshot.bin" Attributes="0" SourcePath="..\vendor\SFE-Minuet-DesktopClient\bin\paragon\v8_context_snapshot.bin" SelfReg="false"/>
     <ROW File="vi.pak" Component_="am.pak" FileName="vi.pak" Attributes="0" SourcePath="..\vendor\SFE-Minuet-DesktopClient\bin\paragon\locales\vi.pak" SelfReg="false" NextFile="zhCN.pak"/>
     <ROW File="window.ico" Component_="cef.pak" FileName="window.ico" Attributes="0" SourcePath="..\vendor\SFE-Minuet-DesktopClient\bin\paragon\window.ico" SelfReg="false" NextFile="Xilium.CefGlue.dll"/>
     <ROW File="zhCN.pak" Component_="am.pak" FileName="zh-CN.pak" Attributes="0" SourcePath="..\vendor\SFE-Minuet-DesktopClient\bin\paragon\locales\zh-CN.pak" SelfReg="false" NextFile="zhTW.pak"/>
@@ -193,7 +195,7 @@
     <ROW Path="&lt;AI_DICTS&gt;ui_en.ail"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.DigCertStoreComponent">
-    <ROW DigitalCertificate="Wrapper.Windows.Product.RSA.pkcs12.pfx" TimeStampUrl="http://timestamp.comodoca.com/authenticode" SignerDescription="[|ProductName]" DescriptionUrl="https://www.symphony.com" SignOptions="7" SignTool="0" UseSha256="1" Password="4A99BAA4D493EE030480AF53BA42EA11CCFB627AB1800400DA9692073D68C522A10A4FD0B5F78525294E51AC7194D55B5EE1D31F"/>
+    <ROW DigitalCertificate="Wrapper.Windows.Product.RSA.pkcs12.pfx" TimeStampUrl="http://timestamp.comodoca.com/authenticode" SignerDescription="[|ProductName]" DescriptionUrl="https://www.symphony.com" SignOptions="0" SignTool="0" UseSha256="1" Password="4A99BAA4D493EE030480AF53BA42EA11CCFB627AB1800400DA9692073D68C522A10A4FD0B5F78525294E51AC7194D55B5EE1D31F"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.FragmentComponent">
     <ROW Fragment="CommonUI.aip" Path="&lt;AI_FRAGS&gt;CommonUI.aip"/>
@@ -210,14 +212,6 @@
     <ROW Fragment="VerifyRepairDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRepairDlg.aip"/>
     <ROW Fragment="WelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\WelcomeDlg.aip"/>
   </COMPONENT>
-  <COMPONENT cid="caphyon.advinst.msicomp.MsiActionTextComponent">
-    <ROW Action="AI_XmlCommit" Description="Committing XML file configurations." Template="Committing XML file configurations." DescriptionLocId="ActionText.Description.AI_XmlCommit" TemplateLocId="ActionText.Template.AI_XmlCommit"/>
-    <ROW Action="AI_XmlConfig" Description="Executing XML file configurations" Template="Configuring XML file: &quot;[1]&quot;" DescriptionLocId="ActionText.Description.AI_XmlConfig" TemplateLocId="ActionText.Template.AI_XmlConfig"/>
-    <ROW Action="AI_XmlInstall" Description="Generating actions to configure XML files" DescriptionLocId="ActionText.Description.AI_XmlInstall"/>
-    <ROW Action="AI_XmlRemove" Description="Executing XML file configurations" Template="Configuring XML file: &quot;[1]&quot;" DescriptionLocId="ActionText.Description.AI_XmlRemove" TemplateLocId="ActionText.Template.AI_XmlRemove"/>
-    <ROW Action="AI_XmlRollback" Description="Rolling back XML file configurations." Template="Rolling back XML file configurations." DescriptionLocId="ActionText.Description.AI_XmlRollback" TemplateLocId="ActionText.Template.AI_XmlRollback"/>
-    <ROW Action="AI_XmlUninstall" Description="Generating actions to configure XML files" DescriptionLocId="ActionText.Description.AI_XmlUninstall"/>
-  </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiAppSearchComponent">
     <ROW Property="AI_DOTNET35_CLIENTPROFILE_SEARCH" Signature_="AI_DotNet35ClientProfileSearchSgn" Builds="DefaultBuild"/>
     <ROW Property="AI_DOTNET35_SEARCH" Signature_="AI_DotNet35SearchSgn" Builds="DefaultBuild"/>
@@ -231,7 +225,6 @@
     <ROW Name="Banner.jpg" SourcePath="Assets\Banner.jpg"/>
     <ROW Name="Tabloid.jpg" SourcePath="Assets\Tabloid.jpg"/>
     <ROW Name="aicustact.dll" SourcePath="&lt;AI_CUSTACTS&gt;aicustact.dll"/>
-    <ROW Name="xmlCfg.dll" SourcePath="&lt;AI_CUSTACTS&gt;xmlCfg.dll"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiControlComponent">
     <ROW Dialog_="AdminBrowseDlg" Control="Logo" Type="Text" X="4" Y="228" Width="38" Height="12" Attributes="1" Text="Symphony" Order="300" TextLocId="Control.Text.AdminBrowseDlg#Logo" MsiKey="AdminBrowseDlg#Logo"/>
@@ -355,8 +348,6 @@
     <ROW Action="AI_DATA_SETTER_1" Type="51" Source="CustomActionData" Target="Paragon.Renderer.exe"/>
     <ROW Action="AI_DATA_SETTER_2" Type="51" Source="CustomActionData" Target="paragon.exe"/>
     <ROW Action="AI_DATA_SETTER_3" Type="51" Source="CustomActionData" Target="paragon.exe"/>
-    <ROW Action="AI_DATA_SETTER_4" Type="51" Source="CustomActionData" Target="[~]"/>
-    <ROW Action="AI_DATA_SETTER_5" Type="51" Source="CustomActionData" Target="[~]"/>
     <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
     <ROW Action="AI_DpiContentScale" Type="1" Source="aicustact.dll" Target="DpiContentScale"/>
     <ROW Action="AI_GetArpIconPath" Type="1" Source="aicustact.dll" Target="GetArpIconPath"/>
@@ -367,12 +358,6 @@
     <ROW Action="AI_SETMIXINSTLOCATION" Type="1" Source="aicustact.dll" Target="MixedAllUsersInstallLocation"/>
     <ROW Action="AI_SHOW_LOG" Type="65" Source="aicustact.dll" Target="LaunchLogFile" WithoutSeq="true"/>
     <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
-    <ROW Action="AI_XmlCommit" Type="11777" Source="xmlCfg.dll" Target="OnXmlCommit" WithoutSeq="true"/>
-    <ROW Action="AI_XmlConfig" Type="11265" Source="xmlCfg.dll" Target="OnXmlConfig" WithoutSeq="true"/>
-    <ROW Action="AI_XmlInstall" Type="1" Source="xmlCfg.dll" Target="OnXmlInstall" AdditionalSeq="AI_DATA_SETTER_4"/>
-    <ROW Action="AI_XmlRemove" Type="11265" Source="xmlCfg.dll" Target="OnXmlRemove" WithoutSeq="true"/>
-    <ROW Action="AI_XmlRollback" Type="11521" Source="xmlCfg.dll" Target="OnXmlRollback" WithoutSeq="true"/>
-    <ROW Action="AI_XmlUninstall" Type="1" Source="xmlCfg.dll" Target="OnXmlUninstall" AdditionalSeq="AI_DATA_SETTER_5"/>
     <ROW Action="KillParagon" Type="1" Source="aicustact.dll" Target="StopProcess" Options="1" AdditionalSeq="AI_DATA_SETTER_2"/>
     <ROW Action="KillParagon_1" Type="1" Source="aicustact.dll" Target="StopProcess" AdditionalSeq="AI_DATA_SETTER_3"/>
     <ROW Action="KillRenderer" Type="1" Source="aicustact.dll" Target="StopProcess" Options="1" AdditionalSeq="AI_DATA_SETTER"/>
@@ -398,10 +383,6 @@
     <ROW Action="AI_DATA_SETTER" Sequence="54"/>
     <ROW Action="AI_SETMIXINSTLOCATION" Sequence="749"/>
     <ROW Action="Paragon.AppPackager.exe" Condition="( NOT Installed ) AND ( POD_URL &lt;&gt; &quot;&quot; )" Sequence="5969"/>
-    <ROW Action="AI_XmlInstall" Condition="(REMOVE &lt;&gt; &quot;ALL&quot;)" Sequence="5102"/>
-    <ROW Action="AI_DATA_SETTER_4" Condition="(REMOVE &lt;&gt; &quot;ALL&quot;)" Sequence="5101"/>
-    <ROW Action="AI_XmlUninstall" Condition="(REMOVE)" Sequence="3102"/>
-    <ROW Action="AI_DATA_SETTER_5" Condition="(REMOVE)" Sequence="3101"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
     <ROW Action="AI_ResolveKnownFolders" Sequence="56"/>
@@ -472,18 +453,5 @@
   <COMPONENT cid="caphyon.advinst.msicomp.MsiUpgradeComponent">
     <ROW UpgradeCode="[|UpgradeCode]" VersionMin="0.0.1" VersionMax="[|ProductVersion]" Attributes="257" ActionProperty="OLDPRODUCTS"/>
     <ROW UpgradeCode="[|UpgradeCode]" VersionMin="[|ProductVersion]" Attributes="2" ActionProperty="AI_NEWERPRODUCTFOUND"/>
-  </COMPONENT>
-  <COMPONENT cid="caphyon.advinst.msicomp.XmlAttributeComponent">
-    <ROW XmlAttribute="version" XmlElement="supportedRuntime" Name="version" Flags="14" Order="0" Value="v4.0"/>
-    <ROW XmlAttribute="version_1" XmlElement="supportedRuntime_1" Name="version" Flags="14" Order="0" Value="v2.0.50727"/>
-  </COMPONENT>
-  <COMPONENT cid="caphyon.advinst.msicomp.XmlElementComponent">
-    <ROW XmlElement="configuration" Name="configuration" Order="0" Flags="30"/>
-    <ROW XmlElement="startup" ParentElement="configuration" Name="startup" Order="0" Flags="14"/>
-    <ROW XmlElement="supportedRuntime" ParentElement="startup" Name="supportedRuntime" Order="0" Flags="14"/>
-    <ROW XmlElement="supportedRuntime_1" ParentElement="startup" Name="supportedRuntime" Order="1" Flags="14"/>
-  </COMPONENT>
-  <COMPONENT cid="caphyon.advinst.msicomp.XmlFileComponent">
-    <ROW XmlFile="Paragon.AppPackager.exe.config" FileName="PARAGO~1.CON|Paragon.AppPackager.exe.config" DirProperty="paragon_Dir" Component="Paragon.Plugins.LocalStorage.dll" RootElement="configuration" Flags="89" Version="1.0" Encoding="UTF-8" IndentUnits="2"/>
   </COMPONENT>
 </DOCUMENT>
